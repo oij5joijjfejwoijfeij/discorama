@@ -1,5 +1,5 @@
 # discorama
-More dico; less rama
+More disco; less rama
 
 # Korleis
  
