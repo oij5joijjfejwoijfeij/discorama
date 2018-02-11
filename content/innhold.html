@@ -1,0 +1,35 @@
+<!DOCTYPE HTTP>
+<html lang="no">
+	<head>
+		<script>
+
+			function postmycontent(e) {
+				if (e.keyCode === 13) {
+					console.log("Trying to post content from");
+					console.dir(e);
+				}
+			}
+			function prepare () {
+				var all = document.getElementsByClassName("avsnitt");
+				for (i in all) {
+					var x = all[i];
+					x.setAttribute("contenteditable", "true");
+					console.log("Made editable");
+					x.addEventListener("keydown", postmycontent);
+				}
+			}
+		</script>
+	</head>
+	<body onload="prepare()">
+		<h1>Testside</h1>
+		<h4>En testside som sannsynligvis bør få en slags CSS etterhvert</h4>
+		<p class="avsnitt">
+			Du trodde kanskje at verden var sånn her?
+		</p>
+		<img src="p1.jpg" width="120" height="80" alt="blomst" />
+		<p class="avsnitt">
+			Vel, det kan hende den er mer slik:
+		</p>
+		<img src="p2.jpg" width="120" height="80" alt="gressklipper" />
+	</body>
+</html>
