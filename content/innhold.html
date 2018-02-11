@@ -1,24 +1,7 @@
 <!DOCTYPE HTTP>
 <html lang="no">
 	<head>
-		<script>
-
-			function postmycontent(e) {
-				if (e.keyCode === 13) {
-					console.log("Trying to post content from");
-					console.dir(e);
-				}
-			}
-			function prepare () {
-				var all = document.getElementsByClassName("avsnitt");
-				for (i in all) {
-					var x = all[i];
-					x.setAttribute("contenteditable", "true");
-					console.log("Made editable");
-					x.addEventListener("keydown", postmycontent);
-				}
-			}
-		</script>
+		<script src="javascript.js"></script>
 	</head>
 	<body onload="prepare()">
 		<h1>Testside</h1>
@@ -33,3 +16,4 @@
 		<img src="p2.jpg" width="120" height="80" alt="gressklipper" />
 	</body>
 </html>
+
